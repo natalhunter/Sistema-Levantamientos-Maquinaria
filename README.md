@@ -1,4 +1,4 @@
-🚜 Sistema de Levantamientos de Maquinaria Pesada
+Sistema de Levantamientos de Maquinaria Pesada
 
 El Sistema de Levantamientos de Maquinaria Pesada es una aplicación orientada a mejorar el proceso de inspección técnica en maquinaria pesada, permitiendo registrar, organizar y analizar información de manera estructurada.
 
