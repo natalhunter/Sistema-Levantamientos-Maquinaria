@@ -1,1 +1,186 @@
+Caso de Uso 1: Registrar Inspección
 
+Actor Principal
+Técnico de Maquinaria Pesada
+
+Descripción
+El técnico registra una inspección de maquinaria pesada dentro del sistema, capturando hallazgos y observaciones detectadas durante la revisión.
+
+Precondiciones
+
+• El técnico debe tener una cuenta registrada en el sistema.
+• Debe ingresar los campos obligatorios, como número de empleado.
+• Debe ingresar el número de serie de la máquina.
+• La maquinaria debe existir en el sistema.
+
+Flujo Principal
+
+1. El técnico selecciona la maquinaria a inspeccionar.
+2. El sistema muestra la información del equipo.
+3. El técnico selecciona alguno de los sistemas de la máquina.
+4. El técnico registra los datos de la inspección en el sistema determinado de la máquina.
+5. El técnico captura los hallazgos detectados.
+6. El técnico clasifica las fallas encontradas.
+7. El sistema valida la información registrada.
+8. El técnico puede acceder a otro sistema de la máquina y regresar al paso 4.
+9. El sistema almacena la inspección.
+
+Extensiones
+
+4a. Información incompleta
+• El sistema solicita completar los datos faltantes.
+
+5a. Falla crítica detectada
+• El sistema marca la inspección como prioridad alta.
+
+6a. Error en validación
+• El sistema muestra un mensaje indicando inconsistencias en la información.
+
+Postcondiciones
+
+• La inspección queda almacenada en el sistema.
+• Los hallazgos quedan asociados a la maquinaria inspeccionada.
+
+
+
+Caso de Uso 2: Registrar Usuario
+
+Actor Principal
+Administrador
+
+Descripción
+El administrador registra un nuevo usuario dentro del sistema, asignándole un nombre de usuario y contraseña para acceder a la plataforma.
+
+Precondiciones
+
+• El administrador debe estar autenticado en el sistema.
+• El usuario no debe existir previamente.
+
+Flujo Principal
+
+1. El administrador inicia el proceso de registro.
+2. El sistema solicita la información del nuevo usuario.
+3. El administrador captura los datos requeridos.
+4. El administrador asigna un rol al usuario.
+5. El sistema valida la información ingresada.
+6. El sistema almacena el nuevo usuario.
+
+Extensiones
+
+3a. Información incompleta
+• El sistema solicita completar los datos faltantes.
+
+5a. Usuario ya registrado
+• El sistema informa que el usuario ya existe.
+
+5b. Datos inválidos
+• El sistema solicita corregir la información ingresada.
+
+Postcondiciones
+
+• El usuario queda registrado en el sistema.
+• El usuario puede acceder según el rol asignado.
+
+
+
+Caso de Uso 3: Consultar Historial de Inspecciones
+
+Actor Principal
+Supervisor
+
+Descripción
+El supervisor consulta inspecciones realizadas previamente sobre una maquinaria específica.
+
+Precondiciones
+
+• El supervisor debe estar autenticado.
+• Deben existir inspecciones registradas.
+
+Flujo Principal
+
+1. El supervisor selecciona la maquinaria.
+2. El sistema busca el historial de inspecciones.
+3. El sistema muestra las inspecciones registradas.
+4. El supervisor revisa la información obtenida.
+5. El supervisor puede modificar la criticidad de una falla detectada.
+
+Extensiones
+
+2a. No existe historial
+• El sistema informa que no hay inspecciones registradas.
+
+Postcondiciones
+
+• El supervisor obtiene información histórica de la maquinaria.
+
+
+
+Caso de Uso 4: Registrar Maquinaria
+
+Actor Principal
+Administrador
+
+Descripción
+El administrador registra una nueva maquinaria dentro del sistema.
+
+Precondiciones
+
+• El administrador debe estar autenticado.
+
+Flujo Principal
+
+1. El administrador registra la información de la maquinaria.
+2. El administrador registra los diferentes sistemas de la máquina.
+3. El administrador carga información visual para cada sistema.
+4. El sistema valida los datos ingresados.
+5. El sistema almacena la maquinaria registrada.
+
+Extensiones
+
+2a. Datos inválidos
+• El sistema solicita corregir la información.
+
+3a. Maquinaria ya registrada
+• El sistema informa que la maquinaria ya existe.
+
+Postcondiciones
+
+• La maquinaria queda disponible dentro del sistema.
+
+
+
+Caso de Uso 5: Clasificar Falla
+
+Actor Principal
+Técnico de Maquinaria Pesada
+
+Descripción
+El técnico clasifica una falla detectada durante la inspección según su criticidad.
+
+Precondiciones
+
+• Debe existir una inspección activa.
+
+Flujo Principal
+
+1. El técnico registra una falla.
+2. El sistema solicita seleccionar la clasificación.
+3. El técnico selecciona la criticidad correspondiente.
+
+Criterios de criticidad:
+
+• La máquina puede funcionar sin sufrir daños por un periodo de tiempo.
+• La máquina puede sufrir más daños en un periodo de tiempo, permitiendo ingresar el tiempo estimado.
+• La máquina no puede funcionar hasta que se corrija la condición.
+• La falla representa un riesgo para la vida o integridad del personal.
+
+4. El sistema almacena la clasificación.
+
+Extensiones
+
+3a. Clasificación no seleccionada
+• El sistema solicita seleccionar una categoría válida.
+
+Postcondiciones
+
+• La falla queda clasificada dentro de la inspección.
